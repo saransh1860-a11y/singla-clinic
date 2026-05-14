@@ -1,0 +1,26 @@
+{
+  "entities": {
+    "appointment": {
+      "title": "Appointment",
+      "description": "Information about a patient's appointment request.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "patientName": { "type": "string", "description": "Name of the patient." },
+        "phoneNumber": { "type": "string", "description": "Contact number." },
+        "department": { "type": "string", "enum": ["Skin Care", "Eye Care", "Obstetrics & Gynaecology"] },
+        "preferredDate": { "type": "string", "format": "date" },
+        "message": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "status": { "type": "string", "enum": ["pending", "confirmed", "cancelled"] }
+      },
+      "required": ["patientName", "phoneNumber", "department", "preferredDate", "createdAt", "status"]
+    }
+  },
+  "firestore": {
+    "appointments/{appointmentId}": {
+      "schema": "appointment",
+      "description": "Collection of appointment requests."
+    }
+  }
+}

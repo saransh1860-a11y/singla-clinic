@@ -1,0 +1,6 @@
+{
+  "name": "SINGLA CLINIC - Premium Healthcare Demo",
+  "description": "A modern, responsive healthcare website demo for Singla Clinic in Ambala, featuring trust-focused UI, easy appointments, and professional design.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
